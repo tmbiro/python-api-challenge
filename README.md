@@ -1,4 +1,4 @@
-# python-api-challenge
+# Python API Challenge
 Module 6 Homework
 # What's the Weather Like?
 
