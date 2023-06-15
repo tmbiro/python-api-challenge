@@ -41,7 +41,7 @@ You should create the following plots:
 After each pair of plots, explain what the linear regression is modeling. For example, describe any relationships that you notice and any other findings you may have.
 
 
-### Part 2: VacationPy
+## Part 2: VacationPy
 
 In this deliverable, you'll use your weather data skills to plan future vacations. Also, you'll use Jupyter notebooks, the geoViews Python library, and the Geoapify API.
 
