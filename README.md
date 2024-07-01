@@ -2,53 +2,76 @@
 Module 6 Homework
 # What's the Weather Like?
 
-## Background
-
-Whether financial, political, or social&mdash;data's true power rests in its ability to answer questions definitively. So, let's take what you've learned about Python requests, APIs, and JSON traversals to answer a fundamental question: "What's the weather like as we approach the equator?"
-
 ## Part 1: WeatherPy
 
-In this deliverable, you'll create a Python script to visualize the weather of over 500 cities of varying distances from the equator. You'll use the citipy Python library Links to an external site., the OpenWeatherMap API Links to an external site., and your problem-solving skills to create a representative model of weather across cities.
+In this deliverable, I created a Python script to visualize the weather of over 500 cities of varying distances from the equator. I used the citipy Python library Links to an external site, the OpenWeatherMap API Links to an external site, and my problem-solving skills to create a representative model of weather across cities.
 
-For this part, you'll use the WeatherPy.ipynb Jupyter notebook provided in the starter code ZIP file. The starter code will guide you through the process of using your Python coding skills to develop a solution to address the required functionalities.
-
-To get started, the code required to generate random geographic coordinates and the nearest city to each latitude and longitude combination is provided.
+For this part, I used the WeatherPy.ipynb Jupyter notebook provided above. 
 
 **Requirement 1:** Create Plots to Showcase the Relationship Between Weather Variables and Latitude
-To fulfill the first requirement, you'll use the OpenWeatherMap API to retrieve weather data from the cities list generated in the starter code. Next, you'll create a series of scatter plots to showcase the following relationships:
+To fulfill the first requirement, I used the OpenWeatherMap API to retrieve weather data from the cities list generated in the WeatherPy.ipynb code. Then, I created a series of scatter plots to showcase the following relationships:
 
 * Latitude vs. Temperature
+  ![image](https://github.com/tmbiro/python-api-challenge/assets/26468137/bcda4229-45c4-4b6b-92e4-ec277f38b099)
+
 * Latitude vs. Humidity
+  ![image](https://github.com/tmbiro/python-api-challenge/assets/26468137/fb28629b-4252-492d-8468-81a2008b460d)
+
 * Latitude vs. Cloudiness
+  ![image](https://github.com/tmbiro/python-api-challenge/assets/26468137/ddee22d7-1972-4010-89d0-af1ec6269802)
+
 * Latitude vs. Wind Speed
+  ![image](https://github.com/tmbiro/python-api-challenge/assets/26468137/79e3b6ea-2bcc-45d3-ae41-b9c0b7832940)
+
 
 **Requirement 2:** Compute Linear Regression for Each Relationship
-To fulfill the second requirement, compute the linear regression for each relationship. Separate the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude). You may find it helpful to define a function in order to create the linear regression plots.
+To fulfill the second requirement, I computed the linear regression for each relationship. I separated the plots into Northern Hemisphere (greater than or equal to 0 degrees latitude) and Southern Hemisphere (less than 0 degrees latitude). 
 
-Next, create a series of scatter plots. Be sure to include the linear regression line, the model's formula, and the r values as you can see in the following image:
-
-You should create the following plots:
+Next, I created a series of scatter plots. I included the linear regression line, the model's formula, and the r values for the following plots:
 
 * Northern Hemisphere - Temperature (F) vs. Latitude
-* Southern Hemisphere - Temperature (F) vs. Latitude
-* Northern Hemisphere - Humidity (%) vs. Latitude
-* Southern Hemisphere - Humidity (%) vs. Latitude
-* Northern Hemisphere - Cloudiness (%) vs. Latitude
-* Southern Hemisphere - Cloudiness (%) vs. Latitude
-* Northern Hemisphere - Wind Speed (mph) vs. Latitude
-* Southern Hemisphere - Wind Speed (mph) vs. Latitude
+  ![image](https://github.com/tmbiro/python-api-challenge/assets/26468137/0131e327-8b8b-46c7-9fb4-9573c0e67ce8)
+  The correlation coefficient is -0.85
+  For cities located in the northern hemisphere, as latitude increases, temperature decreases.
 
-After each pair of plots, explain what the linear regression is modeling. For example, describe any relationships that you notice and any other findings you may have.
+* Southern Hemisphere - Temperature (F) vs. Latitude
+  ![image](https://github.com/tmbiro/python-api-challenge/assets/26468137/891c4f27-90dc-4dcf-bf52-a328fa0df4b2)
+  The correlation coefficient is 0.42
+  For cities in the southern hemisphere, as latitude increases, temperature increases.
+
+* Northern Hemisphere - Humidity (%) vs. Latitude
+  ![image](https://github.com/tmbiro/python-api-challenge/assets/26468137/9a451d52-58f2-4cbe-8f15-21f6249199aa)
+  The correlation coefficient is 0.4
+
+* Southern Hemisphere - Humidity (%) vs. Latitude
+  ![image](https://github.com/tmbiro/python-api-challenge/assets/26468137/f4508b3f-9e9f-4565-b91a-730daddec320)
+  The correlation coefficient is 0.43
+  Regardless of what hemisphere a city is located, when latitude increases, so too does humidity.
+
+* Northern Hemisphere - Cloudiness (%) vs. Latitude
+  ![image](https://github.com/tmbiro/python-api-challenge/assets/26468137/553bf29d-bbea-4cbb-898c-cc3aecac2838)
+  The correlation coefficient is 0.27
+
+* Southern Hemisphere - Cloudiness (%) vs. Latitude
+  ![image](https://github.com/tmbiro/python-api-challenge/assets/26468137/b5cadccb-11a1-498d-bf14-09b1a4209dfd)
+  The correlation coefficient is 0.41
+  Regardless of what hemisphere a city is located, cloudiness increases with city latitude.
+
+* Northern Hemisphere - Wind Speed (mph) vs. Latitude
+  ![image](https://github.com/tmbiro/python-api-challenge/assets/26468137/fbc29834-e202-4f04-a386-f73a2afb0517)
+  The correlation coefficient is 0.04
+  Wind speed does not appear to be influenced by latitude changes for cities located in the northern hemisphere.
+
+* Southern Hemisphere - Wind Speed (mph) vs. Latitude
+  ![image](https://github.com/tmbiro/python-api-challenge/assets/26468137/45037903-75c9-4762-b30b-02435f50135d)
+  The correlation coefficient is -0.29
+  For cities in the southern hemisphere, wind speed decreases as latitude increases.
 
 
 ## Part 2: VacationPy
 
-In this deliverable, you'll use your weather data skills to plan future vacations. Also, you'll use Jupyter notebooks, the geoViews Python library, and the Geoapify API.
+In the VacationPy.ipynb, I used my weather data skills to plan future vacations. I also used Jupyter notebooks, the geoViews Python library, and the Geoapify API.
 
-The code needed to import the required libraries and load the CSV file with the weather and coordinates data for each city created in Part 1 is provided to help you get started.
+Here is a map that displays a point for every city in the city_data_df DataFrame. The size of the point is the humidity in each city.
+<img width="1101" alt="image" src="https://github.com/tmbiro/python-api-challenge/assets/26468137/9995a55f-1dec-400f-9754-46eb38a43108">
 
-Your main tasks will be to use the Geoapify API and the geoViews Python library and employ your Python skills to create map visualizations.
-
-To succeed on this deliverable of the assignment, open the VacationPy.ipynb starter code and complete the following steps:
-
-Create a map that displays a point for every city in the city_data_df DataFrame as shown in the following image. The size of the point should be the humidity in each city.
