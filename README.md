@@ -1,5 +1,4 @@
 # Python API Challenge
-Module 6 Homework
 # What's the Weather Like?
 
 ## Part 1: WeatherPy
